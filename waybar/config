@@ -15,11 +15,13 @@
         "warp-on-scroll": false,
         "format": "{name}: {icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
+            "1": "term",
+            "2": "brow",
+            "3": "file",
+            "4": "work",
+            "5": "wrow",
+            "6": "ssh",
+            "7": "music",
             "urgent": "",
             "focused": "",
             "default": ""

@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad"],
     "modules-center": ["sway/window", "custom/media"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -109,6 +109,10 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+    },
+    "custom/suspend_btn": {
+        "format": "⏻",
+        "on-click": "systemctl suspend"
     }
 }
 

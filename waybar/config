@@ -6,8 +6,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad"],
-    "modules-center": ["sway/window", "custom/media"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/media"],
     "modules-right": ["custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "clock", "battery", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
@@ -111,7 +111,7 @@
         "max-length": 70
     },
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{} {icon}",
         "escape": true,
         "return-type": "json",
         "max-length": 40,
@@ -120,7 +120,7 @@
         "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /home/geff/logs/waybar/mediaplayer.log", // Script in resources/custom_modules folder
     },
     "custom/suspend_btn": {
         "format": "⏻",

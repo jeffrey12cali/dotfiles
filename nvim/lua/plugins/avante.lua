@@ -10,7 +10,7 @@ return {
                 __inherited_from = "openai",
                 api_key_name = "",
                 endpoint = "http://127.0.0.1:11434/v1",
-                model = "codegemma",
+                model = "llama3.1:8b-instruct-q4_0_8k",
             },
         },
     },

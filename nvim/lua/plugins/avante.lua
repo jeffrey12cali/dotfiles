@@ -1,19 +1,11 @@
+local local_opts = require("config.avante_secret")
+
 return {
     "yetone/avante.nvim",
     event = "VeryLazy",
     lazy = false,
     version = false, -- set this to "*" if you want to always pull the latest change, false to update on release
-    opts = {
-        provider = "ollama",
-        vendors = {
-            ollama = {
-                __inherited_from = "openai",
-                api_key_name = "",
-                endpoint = "http://127.0.0.1:11430/v1",
-                model = "llama3.1:8b-instruct-q4_0_8k",
-            },
-        },
-    },
+    opts = local_opts,
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
@@ -22,9 +14,9 @@ return {
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
         --- The below dependencies are optional,
-        "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
+        "hrsh7th/nvim-cmp",            -- autocompletion for avante commands and mentions
         "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-        "zbirenbaum/copilot.lua", -- for providers='copilot'
+        "zbirenbaum/copilot.lua",      -- for providers='copilot'
         {
             -- support for image pasting
             "HakonHarnes/img-clip.nvim",

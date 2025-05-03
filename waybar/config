@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/media"],
-    "modules-right": ["custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "clock", "battery", "tray"],
+    "modules-right": ["custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "clock", "battery", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -28,15 +28,6 @@
             "urgent": "",
             "focused": "",
             "default": ""
-        }
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
         }
     },
     "idle_inhibitor": {
@@ -122,9 +113,5 @@
         "on-scroll-down": "playerctl previous",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /home/geff/logs/waybar/mediaplayer.log", // Script in resources/custom_modules folder
     },
-    "custom/suspend_btn": {
-        "format": "⏻",
-        "on-click": "systemctl suspend"
-    }
 }
 

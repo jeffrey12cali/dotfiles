@@ -1,0 +1,43 @@
+window {
+    font-size: 15px;
+    font-family: "Roboto Medium";
+    background-color: rgba(0,0,0,0.7);
+}
+
+expander > list {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#entry { /* each menu item */
+    margin: 5px;
+    padding: 5px 10px;
+    color: #ffffff;
+}
+
+/* Highlighted menu entry */
+#entry:selected {
+    background: linear-gradient(
+      45deg,
+      rgba(51,204,255,0.93) 0%,
+      rgba(0,255,153,0.93) 100%
+    );
+    border-radius: 5px;     /* optional rounding */
+    color: #000000;            /* dark text for contrast */
+}
+
+#text:selected {
+    color: #000000;            /* dark text for contrast */
+}
+
+/* Optional: search input bar styling */
+#input {
+    background-color: rgba(43,48,59,0.5);
+    border: 2px solid rgba(51,204,255,0.93);
+    color: #ffffff;
+}
+
+/* Optional: scroller background */
+#scroll {
+    background-color: rgba(0,0,0,0.2);
+}
+

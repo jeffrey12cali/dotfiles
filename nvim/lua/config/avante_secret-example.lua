@@ -1,11 +1,10 @@
 return {
+    behaviour = {
+        use_cwd_as_project_root = true,
+    },
     provider = "ollama",
-    vendors = {
-        ollama = {
-            __inherited_from = "openai",
-            api_key_name = "",
-            endpoint = "http://192.168.122.1:11430/v1",
-            model = "llama3.1:8b-instruct-q4_0_8k",
-        },
+    ollama = {
+        endpoint = "http://127.0.0.1:11430", -- Note that there is no /v1 at the end.
+        model = "gemma3:12b-it-q4_K_M",
     },
 }

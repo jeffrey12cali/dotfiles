@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/media"],
-    "modules-right": ["custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["custom/suspend_btn", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "hyprland/language", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -113,5 +113,10 @@
         "on-scroll-down": "playerctl previous",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /home/geff/logs/waybar/mediaplayer.log", // Script in resources/custom_modules folder
     },
+    "hyprland/language": {
+        "format": "{}",
+        "format-es": "ES",
+        "format-en": "US"
+    }
 }
 

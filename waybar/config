@@ -106,11 +106,11 @@
         "escape": true,
         "return-type": "json",
         "max-length": 40,
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl stop",
+        "on-click": "$HOME/.config/waybar/mediaplayer.py --action play-pause",
+        "on-click-right": "$HOME/.config/waybar/mediaplayer.py --action stop",
         "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous",
+        "on-scroll-up": "$HOME/.config/waybar/mediaplayer.py --action next",
+        "on-scroll-down": "$HOME/.config/waybar/mediaplayer.py --action previous",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /home/geff/logs/waybar/mediaplayer.log", // Script in resources/custom_modules folder
     },
     "hyprland/language": {

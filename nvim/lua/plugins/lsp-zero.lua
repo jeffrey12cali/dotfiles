@@ -44,8 +44,7 @@ return {
             mapping = cmp_mappings
         })
 
-        -- Create (or clear) the LspFormatting group once
-        local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+        -- Formatting handled by conform.nvim; avoid LSP format-on-save
 
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
@@ -63,19 +62,6 @@ return {
         })
 
         lsp.on_attach(function(client, bufnr)
-            -- Enable formatting only for clients that support it
-            if client.supports_method("textDocument/formatting") then
-                -- Clear existing autocmds in this group to avoid duplicates
-                vim.api.nvim_clear_autocmds({ group = formatting_group, buffer = bufnr })
-                -- Create a new autocmd that formats on save
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                    group = "LspFormatting",
-                    buffer = bufnr,
-                    callback = function()
-                        vim.lsp.buf.format({ bufnr = bufnr })
-                    end,
-                })
-            end
             local opts = { buffer = bufnr, remap = false }
 
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

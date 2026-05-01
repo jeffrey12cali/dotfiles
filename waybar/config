@@ -42,7 +42,7 @@
         "spacing": 10
     },
     "clock": {
-        "timezone": "Europe/Madrid",
+        "timezone": "Americas/Bogota",
 	"format": "{:%H:%M | %d-%m-%y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%d-%m-%Y}"

@@ -5,20 +5,18 @@
     "Segoe UI", "NotoSans Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   min-height: 0;
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
+  padding: 0;
 }
 
 /* --- Waybar Container --- */
 #waybar {
   background: transparent;
   color: #b8c5db;
-  margin: 0px;
+  margin: 0;
   font-weight: 500;
 }
 
-/* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
+/* --- Modules --- */
 #workspaces,
 #cpu,
 #memory,
@@ -33,13 +31,11 @@
 #language,
 #tray {
   background-color: #0d0f1a;
-  padding: 0.2rem 0.7rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 6px;
-  margin: 5px 4px 0px 4px;
+  margin: 5px 2px 0 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  color: #b8c5db;
   min-width: 0;
-  border: none;
   transition:
     background-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
@@ -49,13 +45,26 @@
   background-color: #363636;
 }
 
-/* Simple Hover effects for individual left modules - BRIGHTER COLOR */
+/* --- Hover Effects --- */
 #cpu:hover,
 #memory:hover,
-#temperature:hover {
+#temperature:hover,
+#clock:hover,
+#custom-media:hover,
+#custom-suspend_btn:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#network:hover,
+#battery:hover,
+#language:hover {
   background-color: #1a1d2e;
 }
 
+#tray:hover {
+  background-color: #252940;
+}
+
+/* --- Workspaces --- */
 #workspaces button {
   color: #b8c5db;
   border-radius: 5px;
@@ -67,49 +76,20 @@
 }
 
 #workspaces button.active {
-  color: #b8c5db;
   background-color: rgba(122, 156, 198, 0.15);
   box-shadow: inset 0 0 0 1px rgba(122, 156, 198, 0.25);
 }
 
 #workspaces button:hover {
   background: #1a1d2e;
-  color: #b8c5db;
 }
 
-
-/* Simple Hover effect for clock module - BRIGHTER COLOR */
-#clock:hover {
-  background-color: #1a1d2e;
-}
-
-/* --- Media Player Module --- */
-#custom-media:hover {
-  background-color: #1a1d2e;
-  color: #b8c5db;
-}
-
+/* --- Suspend Button --- */
 #custom-suspend_btn {
-  color: #b8c5db;
   font-size: 16px;
 }
 
-#custom-suspend_btn:hover,
-#pulseaudio:hover,
-#backlight:hover,
-#network:hover,
-#battery:hover,
-#language:hover {
-  background-color: #1a1d2e;
-  color: #b8c5db;
-}
-
-/* --- Color Definitions --- */
-#clock {
-  color: #b8c5db;
-  font-weight: 500;
-}
-
+/* --- State Colors --- */
 #network.disconnected {
   color: #d88888;
 }
@@ -118,25 +98,17 @@
   color: #89c9a6;
 }
 
-#battery.warning:not(.charging) {
-  color: #d88888;
-}
-
+#battery.warning:not(.charging),
 #battery.critical:not(.charging) {
   color: #d88888;
 }
 
-/* --- Tray Module --- */
-#tray:hover {
-  background-color: #252940;
-}
-
-/* --- Tooltip Styles --- */
+/* --- Tooltip --- */
 tooltip {
   background-color: #0d0f1a;
   color: #b8c5db;
   padding: 5px 12px;
-  margin: 5px 0px;
+  margin: 5px 0;
   border-radius: 6px;
   border: 1px solid rgba(122, 156, 198, 0.15);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);

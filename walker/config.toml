@@ -27,6 +27,7 @@ default = [
   "desktopapplications",
   "menus",
   "websearch",
+  "runner"
 ] # providers to be queried by default
 empty = ["desktopapplications"] # providers to be queried when query is empty
 max_results = 50 # global max results
